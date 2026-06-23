@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { Navbar } from '@/components/navbar'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -17,11 +18,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className="font-sans antialiased">
-        {children}
+    <html lang="en" className="bg-slate-950 scroll-smooth">
+      <body className="font-sans antialiased bg-slate-950 text-white min-h-screen flex flex-col justify-between">
+        <Navbar />
+        <div className="flex-1 w-full">
+          {children}
+        </div>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
 }
+

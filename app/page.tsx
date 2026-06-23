@@ -5,7 +5,6 @@ import { FAQSection } from '@/components/faq-section';
 import { CTASection } from '@/components/cta-section';
 import { Footer } from '@/components/footer';
 import { AboutSection } from '@/components/about-us';
-import { ContactSection } from '@/components/contact-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { SocialStrip } from '@/components/social-strip';
 import { WhatsAppButton } from '@/components/whatsapp-button';
@@ -20,12 +19,12 @@ export default function Home() {
       <TestimonialsSection />
       <SocialStrip />
       <CTASection />
-      <ContactSection />
       <FAQSection />
       <Footer />
       <WhatsAppButton />
     </main>
   );
 }
+
 
 
