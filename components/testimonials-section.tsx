@@ -103,7 +103,7 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
     : doctorEndorsements;
 
   return (
-    <section id="testimonials" className="py-24 bg-slate-950 overflow-hidden border-t border-slate-900">
+    <section id="testimonials" className="py-24 bg-slate-50 overflow-hidden border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -113,23 +113,23 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
           viewport={{ once: true }}
           className="mb-16 text-center md:text-left"
         >
-          <div className="inline-flex items-center gap-3 rounded-full bg-emerald-500/10 px-5 py-2 text-sm font-bold text-emerald-400 mb-6 border border-emerald-500/20">
+          <div className="inline-flex items-center gap-3 rounded-full bg-emerald-500/10 px-5 py-2 text-sm font-bold text-emerald-600 mb-6 border border-emerald-500/20">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-ping" />
             NIGERIANS ARE TALKING
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
             Real Stories, Real Recoveries
           </h2>
-          <p className="mt-4 text-lg text-slate-400 max-w-xl">
+          <p className="mt-4 text-lg text-slate-500 max-w-xl">
             See how ABUAD's botanical science is changing lives across Nigeria.
           </p>
         </motion.div>
 
         {/* Video Testimonials — 9:16 vertical Reels-style */}
         <div className="mb-24">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-8 flex items-center gap-2">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8 flex items-center gap-2">
             <span>Video Testimonials</span>
-            <span className="h-[1px] bg-slate-800 flex-1" />
+            <span className="h-[1px] bg-slate-200 flex-1" />
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto md:max-w-none">
             {filteredVideos.map((v, i) => (
@@ -180,9 +180,9 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
 
         {/* WhatsApp Chat Screenshots */}
         <div className="mb-24">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-8 flex items-center gap-2">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8 flex items-center gap-2">
             <span>WhatsApp Messages & Reorders</span>
-            <span className="h-[1px] bg-slate-800 flex-1" />
+            <span className="h-[1px] bg-slate-200 flex-1" />
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {filteredChats.map((chat, i) => (
@@ -246,9 +246,9 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
         {/* Doctor / Pharmacist Endorsements */}
         {filteredDocs.length > 0 && (
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-8 flex items-center gap-2">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8 flex items-center gap-2">
               <span>Medical Professional Endorsements</span>
-              <span className="h-[1px] bg-slate-800 flex-1" />
+              <span className="h-[1px] bg-slate-200 flex-1" />
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               {filteredDocs.map((d, i) => (
@@ -258,7 +258,7 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.15 }}
-                  className="bg-slate-900 rounded-3xl p-8 border border-white/5 shadow-lg flex flex-col sm:flex-row gap-6 items-start"
+                  className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg flex flex-col sm:flex-row gap-6 items-start"
                 >
                   <img
                     src={d.avatar}
@@ -271,11 +271,11 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
                         <Star key={idx} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-slate-300 text-sm leading-relaxed italic">
+                    <p className="text-slate-600 text-sm leading-relaxed italic">
                       "{d.quote}"
                     </p>
                     <div>
-                      <p className="font-bold text-white text-sm">{d.name}</p>
+                      <p className="font-bold text-slate-900 text-sm">{d.name}</p>
                       <p className="text-emerald-400 text-xs font-semibold">{d.credentials}</p>
                     </div>
                   </div>

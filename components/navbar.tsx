@@ -36,16 +36,16 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-slate-950/80 backdrop-blur-xl border-b border-white/10 text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white/90 backdrop-blur-xl border-b border-slate-200 text-slate-900">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <img
-            src="/Phytogenixlogwhite.png"
+            src="/phyto-logone.png"
             alt="PhytoGenix"
             className="h-9 w-auto object-contain transition-transform group-hover:scale-105"
           />
-          <span className="text-lg font-black tracking-widest text-white group-hover:text-emerald-400 transition-colors">
+          <span className="text-lg font-black tracking-widest text-slate-900 group-hover:text-emerald-600 transition-colors">
             PHYTOGENIX
           </span>
         </Link>
@@ -59,14 +59,14 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`transition-colors relative py-2 ${
-                  isActive ? 'text-emerald-400' : 'text-white/80 hover:text-white'
+                  isActive ? 'text-emerald-600' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 {link.name}
                 {isActive && (
                   <motion.span
                     layoutId="activeNavLine"
-                    className="absolute bottom-0 left-0 h-0.5 w-full bg-emerald-500"
+                    className="absolute bottom-0 left-0 h-0.5 w-full bg-emerald-600"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -91,24 +91,24 @@ export function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden text-white hover:bg-white/10"
+                className="lg:hidden text-slate-700 hover:bg-slate-100"
               >
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[320px] bg-slate-950 border-white/10 text-white p-8 flex flex-col justify-between"
+              className="w-[320px] bg-white border-slate-200 text-slate-900 p-8 flex flex-col justify-between"
             >
               <div>
                 <SheetHeader className="mb-8 text-left">
-                  <SheetTitle className="text-white flex items-center gap-2">
+                  <SheetTitle className="text-slate-900 flex items-center gap-2">
                     <img
-                      src="/Phytogenixlogwhite.png"
+                      src="/phyto-logone.png"
                       alt="PhytoGenix"
                       className="h-8 w-auto object-contain"
                     />
-                    <span className="text-base font-black tracking-widest">PHYTOGENIX</span>
+                    <span className="text-base font-black tracking-widest text-slate-900">PHYTOGENIX</span>
                   </SheetTitle>
                 </SheetHeader>
 
@@ -118,8 +118,8 @@ export function Navbar() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`text-lg font-semibold py-2 border-b border-white/5 transition-colors ${
-                        pathname === link.href ? 'text-emerald-400' : 'text-white/70 hover:text-white'
+                      className={`text-lg font-semibold py-2 border-b border-slate-100 transition-colors ${
+                        pathname === link.href ? 'text-emerald-600' : 'text-slate-600 hover:text-slate-900'
                       }`}
                     >
                       {link.name}
@@ -138,7 +138,7 @@ export function Navbar() {
                 >
                   Shop Now
                 </Button>
-                <div className="flex items-center justify-center gap-2 text-xs text-white/40">
+                <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
                   <ShieldCheck className="h-4 w-4 text-emerald-500" />
                   <span>Secure Payments by Paystack</span>
                 </div>

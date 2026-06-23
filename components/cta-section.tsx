@@ -13,7 +13,7 @@ export function CTASection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative rounded-none overflow-hidden bg-[#050816] min-h-[600px] flex items-center p-8 md:p-24"
+          className="relative rounded-none overflow-hidden bg-emerald-900 min-h-[600px] flex items-center p-8 md:p-24"
         >
           {/* Background Image with Overlay */}
           <div
@@ -22,7 +22,7 @@ export function CTASection() {
               backgroundImage: "url('https://res.cloudinary.com/dsaqsxtup/image/upload/v1778521705/18426_ueg8rg.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050816] via-[#050816]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900 via-emerald-900/80 to-transparent" />
 
           {/* Animated Background Blobs */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-[100px] animate-pulse" />

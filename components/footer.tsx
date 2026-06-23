@@ -11,7 +11,7 @@ const TikTokIcon = () => (
 
 export function Footer() {
   return (
-    <footer className="w-full bg-slate-950 text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
+    <footer className="w-full bg-slate-900 text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         {/* Top Section with Links and Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-24">
@@ -83,7 +83,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider">Secured by</span>
-            <span className="font-bold text-xs bg-slate-900 border border-white/10 rounded-md px-2 py-1 text-white">PAYSTACK</span>
+            <span className="font-bold text-xs bg-slate-800 border border-white/10 rounded-md px-2 py-1 text-white">PAYSTACK</span>
           </div>
         </div>
 

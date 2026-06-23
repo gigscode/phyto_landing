@@ -70,9 +70,9 @@ export function AboutSection() {
                 title: "Our Vision",
                 description: "To be Africa's leading centre for plant-based pharmaceutical research — transforming Nigeria's rich botanical heritage into clinically validated, affordable medicines for every household.",
                 icon: Target,
-                color: "bg-slate-900",
+                color: "bg-emerald-700",
                 textColor: "text-white",
-                accent: "text-emerald-400"
+                accent: "text-emerald-300"
               },
               {
                 title: "Our Mission",
