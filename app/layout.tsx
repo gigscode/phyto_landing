@@ -97,8 +97,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-slate-950 scroll-smooth">
-      <body className="font-sans antialiased bg-slate-950 text-white min-h-screen flex flex-col justify-between">
+    <html lang="en" className="scroll-smooth">
+      <body className="font-sans antialiased bg-white text-slate-900 min-h-screen flex flex-col justify-between">
         <Navbar />
         <div className="flex-1 w-full">
           {children}
