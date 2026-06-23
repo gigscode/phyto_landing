@@ -60,12 +60,23 @@ export function PaystackCheckout({ productName, price, paystackAmount, whatsappT
     return Object.keys(newErrors).length === 0;
   };
 
+  const paystackKey = process.env.NEXT_PUBLIC_PAYSTACK_KEY;
+
   const handlePaystackPayment = () => {
     if (!validateForm()) return;
-    
-    setIsProcessing(true);
 
-    const paystackKey = process.env.NEXT_PUBLIC_PAYSTACK_KEY || 'pk_test_41adad973d09a473cf2b08a68bc1d6199de241ad'; // default test key if undefined
+    if (!paystackKey) {
+      console.error('NEXT_PUBLIC_PAYSTACK_KEY is not configured.');
+      alert('Online payments are temporarily unavailable. Please use checkout via WhatsApp.');
+      return;
+    }
+
+    if (!paystackLoaded || typeof window === 'undefined' || !window.PaystackPop) {
+      alert('Payment gateway is still loading. Please try again in a moment.');
+      return;
+    }
+
+    setIsProcessing(true);
 
     try {
       const handler = window.PaystackPop.setup({
@@ -210,10 +221,11 @@ export function PaystackCheckout({ productName, price, paystackAmount, whatsappT
 
         {/* Action Buttons Stack */}
         <div className="flex flex-col gap-4">
-          <Button 
+          <Button
             onClick={handlePaystackPayment}
-            disabled={isProcessing}
-            className="w-full h-14 text-base font-bold rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 cursor-pointer"
+            disabled={isProcessing || !paystackKey}
+            title={!paystackKey ? 'Online payments unavailable — please use WhatsApp checkout' : undefined}
+            className="w-full h-14 text-base font-bold rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {isProcessing ? (
               <span className="flex items-center gap-2">
