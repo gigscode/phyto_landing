@@ -48,7 +48,7 @@ export function Navbar() {
           : 'bg-transparent backdrop-blur-md border-b border-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
 
         {/* ── Logo ───────────────────────────────────────────── */}
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
@@ -123,7 +123,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[300px] bg-white border-slate-200 text-slate-900 p-0 flex flex-col"
+              className="w-[min(85vw,300px)] max-w-[calc(100vw-1rem)] bg-white border-slate-200 text-slate-900 p-0 flex flex-col"
             >
               {/* Mobile header */}
               <SheetHeader className="px-6 py-5 border-b border-slate-100">
