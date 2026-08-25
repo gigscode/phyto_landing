@@ -70,7 +70,7 @@ export function Hero() {
           {/* ══════════════════════════════════════════════════════════════
               LEFT COLUMN
           ══════════════════════════════════════════════════════════════ */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left mb-26 lg:mb-0">
 
             {/* ── Headline ──────────────────────────────────────────────── */}
             {/*
@@ -182,8 +182,7 @@ export function Hero() {
               single image and layer the numbered badges on top.
           ══════════════════════════════════════════════════════════════ */}
           <div
-            className="relative w-full select-none ml-4 lg:ml-8"
-            style={{ height: '820px' }}
+            className="relative w-full select-none ml-4 lg:ml-8 h-auto md:h-[820px] pb-30 md:pb-0"
             aria-label="Product showcase - Virucidine, AB Health Animation, AB-MaL"
           >
             {/* ── Composite product image ─────────────────────────────── */}
@@ -193,7 +192,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-[46%] top-[16%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
+              className="absolute left-1/2 top-[10%] md:left-[46%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] md:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
               style={{
                 objectFit: 'contain',
                 objectPosition: '35% center',
@@ -301,16 +300,13 @@ export function Hero() {
 
       </div>{/* end max-w container */}
 
-      {/* ── Benefits strip - absolutely pinned to section bottom boundary ──
-           bottom: -40px means the card's vertical centre sits exactly on
-           the line where the hero ends and the products section begins.
-           The products section uses pt-12 to clear the overlapping half.
-      ── */}
+      {/* ── Benefits strip - desktop (large cards) and mobile compact banner ── */}
+      {/* Desktop/tablet: show full 4-card strip; Mobile: compact trust + CTA */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-0 right-0 z-[100] px-6 sm:px-8 lg:px-12"
+        className="hidden sm:block absolute left-0 right-0 z-[100] px-6 sm:px-8 lg:px-12"
         style={{ bottom: '-40px' }}
       >
         <div
@@ -387,6 +383,28 @@ export function Hero() {
               </div>
             </div>
           ))}
+        </div>
+      </motion.div>
+
+      {/* Mobile compact banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.1 }}
+        className="block sm:hidden relative z-[100] px-6 sm:px-8 lg:px-12 mt-8"
+      >
+        <div className="mx-auto max-w-md bg-white rounded-2xl flex items-center gap-3 px-4 py-2 shadow-md justify-start">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                <path d="M20 6c0 6-8 12-8 12S4 12 4 6a8 8 0 0 1 16 0z" />
+              </svg>
+            </div>
+            <div className="leading-tight">
+              <div className="text-sm font-semibold text-emerald-800">100% Natural • NAFDAC‑Approved</div>
+              <div className="text-xs text-gray-500">Made from carefully selected natural ingredients</div>
+            </div>
+          </div>
         </div>
       </motion.div>
 
