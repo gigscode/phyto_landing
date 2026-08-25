@@ -13,7 +13,7 @@ export function Hero() {
      * - overflow-hidden so the large BG circle doesn't cause scroll
      */
     <section
-      className="relative z-20 overflow-hidden flex flex-col min-h-screen"
+      className="relative z-20 overflow-visible sm:overflow-hidden flex flex-col min-h-screen"
       style={{ backgroundColor: '#f0efe9' }}
     >
       {/* ── Navbar spacer ──────────────────────────────────────────────── */}
@@ -192,7 +192,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-1/2 top-[10%] md:left-[46%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] md:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
+                className="absolute left-[46%] top-[52%] md:left-[44%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] md:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
               style={{
                 objectFit: 'contain',
                 objectPosition: '35% center',
@@ -391,7 +391,8 @@ export function Hero() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.1 }}
-        className="block sm:hidden relative z-[100] px-6 sm:px-8 lg:px-12 mt-8"
+        className="block sm:hidden absolute left-0 right-0 z-[100] px-6 sm:px-8 lg:px-12"
+        style={{ bottom: '-24px' }}
       >
         <div className="mx-auto max-w-md bg-white rounded-2xl flex items-center gap-3 px-4 py-2 shadow-md justify-start">
           <div className="flex items-center gap-3">

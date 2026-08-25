@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
-import { Navbar } from '@/components/navbar'
+import NavbarClient from '@/components/navbar-client'
 import './globals.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://phytogenix.com'
@@ -99,7 +99,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="font-sans antialiased bg-white text-slate-900 min-h-screen flex flex-col justify-between">
-        <Navbar />
+        <NavbarClient />
         <div className="flex-1 w-full">
           {children}
         </div>
