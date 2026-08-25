@@ -192,7 +192,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute left-[46%] top-[52%] md:left-[44%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] md:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
+                className="absolute left-[46%] top-[52%] md:left-[44%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] md:w-[80%] lg:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
               style={{
                 objectFit: 'contain',
                 objectPosition: '35% center',
