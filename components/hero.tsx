@@ -13,7 +13,7 @@ export function Hero() {
      * - overflow-hidden so the large BG circle doesn't cause scroll
      */
     <section
-      className="relative z-20 overflow-visible flex flex-col min-h-screen"
+      className="relative z-20 overflow-hidden flex flex-col min-h-screen"
       style={{ backgroundColor: '#f0efe9' }}
     >
       {/* ── Navbar spacer ──────────────────────────────────────────────── */}
@@ -44,8 +44,7 @@ export function Hero() {
 
       {/* ── Main content grid ───────────────────────────────────────────── */}
       <div
-        className="relative z-10 flex-1 flex flex-col justify-center w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12"
-        style={{ paddingTop: '3rem', paddingBottom: '5rem' }}
+        className="relative z-10 flex-1 flex flex-col justify-center w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-6 md:pt-12 pb-12 md:pb-20"
       >
 
         {/* Top eyebrow badge - carried over, colours updated in Chunk 3 */}
@@ -194,10 +193,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
+              className="absolute left-[46%] top-[16%] md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-[115%] max-w-[1400px] h-auto md:scale-105 lg:scale-110"
               style={{
                 objectFit: 'contain',
-                objectPosition: 'center center',
+                objectPosition: '35% center',
                   filter: 'drop-shadow(0 22px 34px rgba(28, 50, 33, 0.15))',
                 mixBlendMode: 'multiply',
               }}
@@ -273,7 +272,7 @@ export function Hero() {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.45, delay: 1.1, ease: 'easeOut' }}
-              style={{ top: '28%', right: '-10', zIndex: 10 }}
+              style={{ top: '28%', right: '-40', zIndex: 10 }}
             >
               <div
                 className="flex items-center justify-center shrink-0 rounded-full text-white font-bold shadow-md"
@@ -315,7 +314,7 @@ export function Hero() {
         style={{ bottom: '-40px' }}
       >
         <div
-          className="mx-auto max-w-5xl rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-0 overflow-hidden"
+          className="mx-auto max-w-5xl rounded-2xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 overflow-hidden"
           style={{
             backgroundColor: '#ffffff',
             boxShadow: '0 8px 40px rgba(30,77,53,0.10), 0 2px 8px rgba(0,0,0,0.06)',

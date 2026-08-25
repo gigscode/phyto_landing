@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Menu, ShieldCheck, ShoppingBag } from 'lucide-react';
+import { Leaf, ShieldCheck, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -115,9 +115,10 @@ export function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden text-slate-700 hover:bg-slate-100 h-10 w-10"
+                className="lg:hidden text-emerald-700 hover:bg-emerald-50 h-11 w-11 border-2 border-emerald-200 shadow-sm"
+                aria-label="Open menu"
               >
-                <Menu className="h-5 w-5" />
+                <Leaf className="h-6 w-6 text-emerald-700" strokeWidth={2.25} />
               </Button>
             </SheetTrigger>
             <SheetContent

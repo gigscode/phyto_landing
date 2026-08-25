@@ -214,7 +214,7 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
                 <div 
                   className="flex-1 p-4 space-y-4 min-h-[250px] flex flex-col justify-end bg-repeat opacity-95"
                   style={{ 
-                    backgroundImage: `url('https://res.cloudinary.com/dsaqsxtup/image/upload/v1778521703/wa-bg_yfl6k5.png')`,
+                    backgroundImage: `radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.00) 30%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.00) 35%)`,
                     backgroundSize: '300px'
                   }}
                 >
