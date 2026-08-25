@@ -22,15 +22,15 @@ export function Footer() {
               <span className="font-bold text-2xl tracking-widest text-white">PHYTOGENIX</span>
             </div>
             <p className="text-white/60 max-w-sm leading-relaxed">
-              Pioneering the future of herbal medicine through university-led research, clinical validation, and evidence-based plant therapeutics from ABUAD's Bogoro Research Institute.
+              Nigeria's trusted plant-based medicine brand. Three NAFDAC-approved formulas developed at ABUAD's Bogoro Research Institute - built to protect and heal every Nigerian home.
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: Facebook, href: '#' },
-                { Icon: Instagram, href: '#' },
-                { Icon: TikTokIcon, href: '#' },
+                { Icon: Facebook, href: 'https://facebook.com/phytogenixng' },
+                { Icon: Instagram, href: 'https://instagram.com/phytogenixng' },
+                { Icon: TikTokIcon, href: 'https://tiktok.com/@phytogenixng' },
               ].map(({ Icon, href }, i) => (
-                <a key={i} href={href} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-emerald-500 transition-colors group text-white/40 hover:text-white">
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-emerald-500 transition-colors group text-white/40 hover:text-white">
                   <Icon />
                 </a>
               ))}
@@ -48,11 +48,11 @@ export function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="font-bold text-lg text-emerald-400">Enquiries</h4>
+            <h4 className="font-bold text-lg text-emerald-400">Company</h4>
             <ul className="space-y-4 text-white/50 text-sm">
               <li><Link href="/contact" className="hover:text-white transition-colors">Bulk Orders & Wholesale</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Distribution Partnerships</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Bogoro Research Centre</Link></li>
+              <li><Link href="/support" className="hover:text-white transition-colors">Customer Support</Link></li>
             </ul>
           </div>
 

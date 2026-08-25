@@ -198,8 +198,8 @@ export default function AbAnimationPage() {
             <div className="space-y-3">
               {product.ingredients.map((ing, i) => (
                 <div key={i} className="bg-white p-4 rounded-xl border border-slate-200 text-xs flex justify-between items-center shadow-sm">
-                  <span className="font-bold text-slate-900">{ing.split(' — ')[0]}</span>
-                  <span className="text-purple-600 font-medium">{ing.split(' — ')[1]}</span>
+                  <span className="font-bold text-slate-900">{ing.split(' - ')[0]}</span>
+                  <span className="text-purple-600 font-medium">{ing.split(' - ')[1]}</span>
                 </div>
               ))}
             </div>

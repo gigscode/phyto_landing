@@ -175,7 +175,7 @@ export function ProductLanding({ product }: { product: Product }) {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {product.id === 3
-                ? 'Malaria kills thousands of Nigerians every year. AB-MaL is ABUAD\'s answer — a clinically researched, plant-based capsule built to prevent and treat malaria affordably, nationwide.'
+                ? 'Malaria kills thousands of Nigerians every year. AB-MaL is ABUAD\'s answer - a clinically researched, plant-based capsule built to prevent and treat malaria affordably, nationwide.'
                 : 'Our formulation goes through rigorous clinical validation to ensure maximum efficacy and safety.'}
             </p>
           </div>
@@ -216,7 +216,7 @@ export function ProductLanding({ product }: { product: Product }) {
               </h2>
               <p className="text-muted-foreground text-lg">
                 {product.id === 3
-                  ? 'Every capsule contains only plant-based active compounds — no chemical additives, no fillers. Formulated at ABUAD\'s Bogoro Research Centre and manufactured to NAFDAC standards.'
+                  ? 'Every capsule contains only plant-based active compounds - no chemical additives, no fillers. Formulated at ABUAD\'s Bogoro Research Centre and manufactured to NAFDAC standards.'
                   : 'We believe in full disclosure. Every ingredient is ethically sourced and tested for purity levels exceeding industry standards.'}
               </p>
               <div className="space-y-4">
@@ -275,7 +275,7 @@ export function ProductLanding({ product }: { product: Product }) {
               </h2>
               <p className="text-background/60 mb-8 text-lg">
                 {product.id === 3
-                  ? 'Be part of Nigeria\'s nationwide malaria campaign. Order AB-MaL — the homegrown, plant-based anti-malarial from ABUAD\'s Bogoro Research Institute.'
+                  ? 'Be part of Nigeria\'s nationwide malaria campaign. Order AB-MaL - the homegrown, plant-based anti-malarial from ABUAD\'s Bogoro Research Institute.'
                   : 'Join thousands of others who have transformed their lives with our university-researched botanical extracts.'}
               </p>
 

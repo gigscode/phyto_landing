@@ -1,109 +1,164 @@
 'use client';
 
 import { motion } from "framer-motion";
-import {
-  Microscope,
-  ShieldCheck,
-  Zap,
-  Target
-} from "lucide-react";
+import { ShieldCheck, Award, Leaf, Users } from "lucide-react";
+
+const credentials = [
+  {
+    icon: Award,
+    title: "NAFDAC Approved",
+    body: "Every PhytoGenix formula meets Nigeria's strict regulatory standards for safety, quality, and efficacy.",
+    color: "bg-emerald-500",
+  },
+  {
+    icon: ShieldCheck,
+    title: "NIMR Evaluated",
+    body: "Virucidine is clinically evaluated by the Nigerian Institute of Medical Research - Nigeria's gold standard.",
+    color: "bg-blue-500",
+  },
+  {
+    icon: Leaf,
+    title: "100% Plant-Based",
+    body: "No synthetic additives, no chemical binders. Pure, ethically sourced West African botanicals in every capsule and bottle.",
+    color: "bg-purple-500",
+  },
+  {
+    icon: Users,
+    title: "Trusted by Families",
+    body: "From Lagos to Kano, Nigerian households are stocking PhytoGenix products as their first line of natural defence.",
+    color: "bg-yellow-500",
+  },
+];
 
 export function AboutSection() {
   return (
-    <section className="relative bg-white py-24 px-4 overflow-hidden">
-      {/* Background Abstract Shapes */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
-        <div className="absolute top-1/4 -left-20 w-64 h-64 bg-emerald-100 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-yellow-50 rounded-full blur-3xl animate-pulse delay-1000" />
+    <section className="relative bg-slate-950 py-28 px-4 overflow-hidden">
+      {/* Background blobs */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px]" />
       </div>
 
-      <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-2 lg:items-center relative z-10">
-        {/* Left Image Section - Modern Layered Style */}
-        <div className="relative">
+      <div className="mx-auto max-w-7xl relative z-10">
+        {/* Top label */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold text-emerald-400 tracking-widest uppercase mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            THE PHYTOGENIX DIFFERENCE
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black text-white leading-[1.05] tracking-tight">
+            Born in Nigeria's
+            <br />
+            <span className="text-emerald-400">Leading Research Lab.</span>
+            <br />
+            Built for Every Home.
+          </h2>
+          <p className="mt-6 text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
+            Every PhytoGenix formula starts in the Bogoro Research Institute at Afe Babalola University -
+            where Nigeria's brightest pharmacologists transform our continent's most potent plants
+            into medicines that actually work.
+          </p>
+        </motion.div>
+
+        {/* Two-column layout */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+          {/* Left - image */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            {/* Main Image with Modern Mask */}
-            <div className="relative z-10 rounded-none overflow-hidden shadow-2xl border-8 border-white">
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3]">
               <img
                 src="https://res.cloudinary.com/dsaqsxtup/image/upload/v1778522565/126427_xovoq5.jpg"
-                alt="PhytoGenix Research"
-                className="w-full md:h-[700px] h-[400px] object-cover transition-transform duration-700 hover:scale-105"
+                alt="PhytoGenix Research at ABUAD"
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+
+              {/* Floating stat */}
+              <div className="absolute bottom-6 left-6 right-6 bg-slate-950/80 backdrop-blur-md rounded-2xl border border-white/10 p-4">
+                <p className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Research Partner</p>
+                <p className="text-white font-bold text-base leading-tight">Afe Babalola University (ABUAD)</p>
+                <p className="text-white/50 text-sm">Bogoro Research Institute · College of Pharmacy</p>
+              </div>
             </div>
 
-            {/* Accent Shapes */}
-            <div className="absolute -top-10 -left-10 w-32 h-32 bg-emerald-50 rounded-none -z-10" />
-            <div className="absolute top-20 -left-6 w-12 h-12 border-4 border-yellow-200 rounded-none -z-10" />
+            {/* Decorative corner accents */}
+            <div className="absolute -top-4 -left-4 w-20 h-20 border border-emerald-500/20 rounded-2xl pointer-events-none" />
+            <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-yellow-400/10 rounded-xl pointer-events-none" />
           </motion.div>
+
+          {/* Right - content */}
+          <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                Nigeria has always had the answers.
+                <br />
+                <span className="text-white/50">We made them safe, standardised, and available.</span>
+              </h3>
+              <p className="text-white/60 leading-relaxed">
+                Traditional West African botanicals have treated illness for centuries. PhytoGenix takes that wisdom
+                and puts it through rigorous pharmacological science - so you get the healing power of nature
+                with the confidence of modern clinical validation.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="grid grid-cols-2 gap-4"
+            >
+              {[
+                { number: '3', label: 'Approved Formulas' },
+                { number: '0', label: 'Adverse Effects Recorded' },
+                { number: '2', label: 'Research Institutions' },
+                { number: '100%', label: 'Natural Ingredients' },
+              ].map(({ number, label }) => (
+                <div
+                  key={label}
+                  className="rounded-2xl bg-white/5 border border-white/8 p-5 hover:bg-white/8 transition-colors"
+                >
+                  <p className="text-3xl font-black text-white mb-1">{number}</p>
+                  <p className="text-white/40 text-xs font-medium">{label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
 
-        {/* Right Content Section */}
-        <div className="space-y-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center gap-3 rounded-sm bg-emerald-50 px-5 py-2 text-sm font-bold text-emerald-700 mb-8 border border-emerald-100">
-              <span className="w-2 h-2 rounded-none bg-emerald-500 animate-ping" />
-              WHO WE ARE
-            </div>
-            <h2 className="text-4xl font-bold leading-[1.1] md:text-6xl text-slate-900 mb-8">
-              Research-Driven <br />
-              <span className="text-emerald-600">Herbal Discovery</span>
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed">
-              PhytoGenix is a digital herbal clinical research platform inspired by the collaborative work between Afe Babalola University and the Nigerian Institute of Medical Research. We modernize herbal medicine research using scalable digital infrastructure.
-            </p>
-          </motion.div>
-
-          {/* Feature Grid */}
-          <div className="grid gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Our Vision",
-                description: "To be Africa's leading centre for plant-based pharmaceutical research — transforming Nigeria's rich botanical heritage into clinically validated, affordable medicines for every household.",
-                icon: Target,
-                color: "bg-emerald-700",
-                textColor: "text-white",
-                accent: "text-emerald-300"
-              },
-              {
-                title: "Our Mission",
-                description: "To research, develop, and deliver safe, NAFDAC-approved herbal therapeutics through rigorous scientific inquiry at ABUAD's Bogoro Research Institute — in partnership with NIMR — making effective healthcare accessible to all Nigerians.",
-                icon: ShieldCheck,
-                color: "bg-emerald-500",
-                textColor: "text-white",
-                accent: "text-yellow-300"
-              }
-            ].map((card, i) => (
-              <motion.div
-                key={card.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className={`group relative rounded-2xl ${card.color} p-10 ${card.textColor} shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default overflow-hidden`}
-              >
-                {/* Decorative background glow */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-none group-hover:scale-150 transition-transform duration-700" />
-
-                <div className={`mb-8 flex h-16 w-16 items-center justify-center rounded-sm bg-white/10 backdrop-blur-md border border-white/20 transition-transform group-hover:rotate-6`}>
-                  <card.icon className={`h-8 w-8 ${card.accent}`} />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
-                <p className="text-sm opacity-70 leading-relaxed">{card.description}</p>
-
-              
-              </motion.div>
-            ))}
-          </div>
+        {/* Credential cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {credentials.map((card, i) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="rounded-2xl bg-white/5 border border-white/8 p-6 hover:bg-white/8 transition-all duration-300 group"
+            >
+              <div className={`w-11 h-11 rounded-xl ${card.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <card.icon className="w-5 h-5 text-white" />
+              </div>
+              <h4 className="text-white font-bold text-base mb-2">{card.title}</h4>
+              <p className="text-white/45 text-sm leading-relaxed">{card.body}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

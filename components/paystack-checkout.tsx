@@ -224,7 +224,7 @@ export function PaystackCheckout({ productName, price, paystackAmount, whatsappT
           <Button
             onClick={handlePaystackPayment}
             disabled={isProcessing || !paystackKey}
-            title={!paystackKey ? 'Online payments unavailable — please use WhatsApp checkout' : undefined}
+            title={!paystackKey ? 'Online payments unavailable - please use WhatsApp checkout' : undefined}
             className="w-full h-14 text-base font-bold rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {isProcessing ? (

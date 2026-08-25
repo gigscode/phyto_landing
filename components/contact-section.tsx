@@ -119,7 +119,7 @@ export function ContactSection() {
                 <label className="text-xs font-bold uppercase tracking-wider text-white/50">Message</label>
                 <textarea
                   rows={4}
-                  placeholder="Tell us about your enquiry — product order, distribution, or research partnership..."
+                  placeholder="Tell us about your enquiry - product order, distribution, or research partnership..."
                   className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-emerald-500"
                 />
               </div>

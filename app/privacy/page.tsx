@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy — PhytoGenix',
+  title: 'Privacy Policy - PhytoGenix',
 };
 
 export default function PrivacyPage() {

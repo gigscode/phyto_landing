@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { WhatsAppButton } from '@/components/whatsapp-button';
 
 export const metadata = {
-  title: 'Support — PhytoGenix',
+  title: 'Support - PhytoGenix',
 };
 
 const faqs = [
@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How long does delivery take?",
-    a: "We deliver within 2–5 business days across Nigeria. Lagos and Abuja orders are typically faster.",
+    a: "We deliver within 2-5 business days across Nigeria. Lagos and Abuja orders are typically faster.",
   },
   {
     q: "Can I get a bulk or wholesale order?",

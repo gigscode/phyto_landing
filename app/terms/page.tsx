@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Terms of Service — PhytoGenix',
+  title: 'Terms of Service - PhytoGenix',
 };
 
 export default function TermsPage() {
@@ -36,7 +36,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">4. Shipping & Delivery</h2>
-            <p>We aim to deliver within 2–5 business days across Nigeria. Delivery timelines may vary based on location. We are not liable for delays caused by third-party logistics providers or circumstances beyond our control.</p>
+            <p>We aim to deliver within 2-5 business days across Nigeria. Delivery timelines may vary based on location. We are not liable for delays caused by third-party logistics providers or circumstances beyond our control.</p>
           </section>
 
           <section>
@@ -46,7 +46,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">6. Intellectual Property</h2>
-            <p>All content on this website — including text, images, product names, and branding — is the property of PhytoGenix / ABUAD Bogoro Research Institute and may not be reproduced without written permission.</p>
+            <p>All content on this website - including text, images, product names, and branding - is the property of PhytoGenix / ABUAD Bogoro Research Institute and may not be reproduced without written permission.</p>
           </section>
 
           <section>

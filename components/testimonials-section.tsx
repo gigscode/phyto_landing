@@ -74,7 +74,7 @@ const doctorEndorsements = [
   {
     productId: 2, // Virucidine
     name: "Dr. Oluwaseun Adeyemi",
-    credentials: "MBBS, MPH — General Practitioner, Lagos",
+    credentials: "MBBS, MPH - General Practitioner, Lagos",
     quote: "The clinical data behind Virucidine is compelling. Having evaluated its NIMR safety and efficacy tests, I recommend it for viral symptom relief.",
     avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80",
     rating: 5,
@@ -82,7 +82,7 @@ const doctorEndorsements = [
   {
     productId: 3, // AB-MaL
     name: "Pharm. Ngozi Eze",
-    credentials: "B.Pharm — Community Pharmacist, Enugu",
+    credentials: "B.Pharm - Community Pharmacist, Enugu",
     quote: "We advise families to stock AB-MaL before malaria season starts. It is the most requested herbal preventive shield in our community pharmacy.",
     avatar: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80",
     rating: 5,
@@ -103,7 +103,7 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
     : doctorEndorsements;
 
   return (
-    <section id="testimonials" className="py-24 bg-slate-50 overflow-hidden border-t border-slate-200">
+    <section id="testimonials" className="py-24 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -115,17 +115,17 @@ export function TestimonialsSection({ productId }: TestimonialProp) {
         >
           <div className="inline-flex items-center gap-3 rounded-full bg-emerald-500/10 px-5 py-2 text-sm font-bold text-emerald-600 mb-6 border border-emerald-500/20">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-ping" />
-            NIGERIANS ARE TALKING
+            REAL CUSTOMERS. REAL RESULTS.
           </div>
           <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
             Real Stories, Real Recoveries
           </h2>
           <p className="mt-4 text-lg text-slate-500 max-w-xl">
-            See how ABUAD's botanical science is changing lives across Nigeria.
+            Thousands of Nigerian families trust PhytoGenix. Here's what they're saying.
           </p>
         </motion.div>
 
-        {/* Video Testimonials — 9:16 vertical Reels-style */}
+        {/* Video Testimonials - 9:16 vertical Reels-style */}
         <div className="mb-24">
           <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8 flex items-center gap-2">
             <span>Video Testimonials</span>
